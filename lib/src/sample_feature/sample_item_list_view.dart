@@ -25,7 +25,7 @@ class _SampleItemListViewState extends State<SampleItemListView> {
   @override
   Widget build(BuildContext context) {
     final use24Hour = MediaQuery.alwaysUse24HourFormatOf(context);
-    debugPrint('Use 24 hour format: $use24Hour at ${DateTime.now()} above MA');
+    debugPrint('Use 24 hour format: $use24Hour at ${DateTime.now()} in Home');
     return Scaffold(
       appBar: AppBar(
         title: Text('Sample Items $use24Hour'),

@@ -68,34 +68,13 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute<void>(
               settings: routeSettings,
               builder: (BuildContext context) {
-                return
-
-                    // AnnotatedRegion<SystemUiOverlayStyle>(
-                    // value: SystemUiOverlayStyle(
-                    //   // The top status bar settings.
-                    //   // systemStatusBarContrastEnforced: false,
-                    //   // statusBarColor: statusBarColor,
-                    //   // statusBarBrightness: statusBarBrightness,
-                    //   // statusBarIconBrightness: statusBarIconBrightness,
-                    //   // The bottom navigation bar settings.
-                    //   systemNavigationBarContrastEnforced: false,
-                    //   systemNavigationBarColor: Colors.black.withAlpha(0x01),
-                    //   // Divider setting.
-                    //   systemNavigationBarDividerColor: Colors.transparent,
-                    //   // Bottom system navigation bar icon or swipe bar navigator color.
-                    //   systemNavigationBarIconBrightness:
-                    //       Theme.of(context).brightness == Brightness.dark
-                    //           ? Brightness.light
-                    //           : Brightness.dark,
-                    // ),
-                    // child:
-
-                    switch (routeSettings.name) {
+                return switch (routeSettings.name) {
                   SettingsView.routeName =>
                     SettingsView(controller: settingsController),
                   SampleItemDetailsView.routeName =>
                     const SampleItemDetailsView(),
                   SampleItemListView.routeName => const SampleItemListView(),
+                  // Default screen
                   _ => const SampleItemListView(),
                 };
                 // );

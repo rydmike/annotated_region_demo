@@ -1,23 +1,24 @@
-# test_always_use_24h_format
+# Demo of transparent AnnotatedRegion
 
-This repo was used to test issue: 
-
+This repo was originally used to test issue: 
 https://github.com/flutter/flutter/issues/135657
 
-But now demonstrate usage of `AnnotatedRegion` to use transparent system navigation bar.
+But later modified to demonstrate usage of `AnnotatedRegion` to use transparent system navigation bar on Android.
 
-Not that for it to work you must also set `SystemUiMode.edgeToEdge` so:
+Note that for this to work you must also set `SystemUiMode.edgeToEdge` so:
 
 ```dart
   // If opacity is specified, we need to enable SystemUiMode.edgeToEdge to
   // be able to see content scrolling behind the transparent bar. Only do
   // this when using opacity or transparent system navigation bar.
   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-
 ```
 
-After that setting the transparent style is typically enough to do in the screens that can
-chnage the theme mode between light and dark mode.
+In this example that is done in the [`main.dart`](https://github.com/rydmike/annotated_region_demo/blob/main/lib/main.dart) file.
+
+After that setting the transparent system navigation bar style is typically enough to do in the screen(s) that can chnage the theme mode between light and dark mode.
+
+There you can do something like:
 
 ```dart
   @override
@@ -34,6 +35,12 @@ chnage the theme mode between light and dark mode.
       child: Scaffold(...),
     );
 ```
+
+In this demo it is done in file [`settings_view.dart`](https://github.com/rydmike/annotated_region_demo/blob/main/lib/src/settings/settings_view.dart).
+
+The bottom navigation bar on the home screen does not do anything, it is only there to show what it looks like when one is present. The theme settings and details page show the look when a navigator is not present.
+
+The system nav also changes correctly in this demo when the `ThemeMode.system` is used and light/dark mode is toggled via Android system settings.
 
 
 ## Getting Started
