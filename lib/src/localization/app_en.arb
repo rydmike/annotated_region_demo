@@ -1,0 +1,6 @@
+{
+  "appTitle": "test_always_use_24h_format",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
