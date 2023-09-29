@@ -58,8 +58,15 @@ class MyApp extends StatelessWidget {
           // Define a light and dark color theme. Then, read the user's
           // preferred ThemeMode (light, dark, or system default) from the
           // SettingsController to display the correct theme.
-          theme: ThemeData(useMaterial3: true),
-          darkTheme: ThemeData.dark(useMaterial3: true),
+          theme: ThemeData(
+            useMaterial3: true,
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+          ),
+          darkTheme: ThemeData(
+            useMaterial3: true,
+            colorScheme: ColorScheme.fromSeed(
+                brightness: Brightness.dark, seedColor: Colors.green),
+          ),
           themeMode: settingsController.themeMode,
 
           // Define a function to handle named routes in order to support
