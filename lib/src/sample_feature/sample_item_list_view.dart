@@ -28,7 +28,7 @@ class _SampleItemListViewState extends State<SampleItemListView> {
     debugPrint('Use 24 hour format: $use24Hour at ${DateTime.now()} in Home');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sample Items $use24Hour'),
+        title: const Text('Transparent SysNavBar '),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
